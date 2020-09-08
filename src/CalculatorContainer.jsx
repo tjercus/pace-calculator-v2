@@ -12,47 +12,51 @@ const CalculatorContainer = () => {
 
   return (
     <div id={"calculator-container"}>
-      <div id={"time-row"}>
+      <div id={"time-row"} className={"row"}>
         {"Time (hms):"}
         <input
-          type={"text"}
           id={"time-hours"}
           name={"timeHours"}
-          value={state.timeHours}
           onChange={onChangeData}
+          placeholder={"h"}
+          type={"text"}
+          value={state.timeHours}
         />
         <input
-          type={"text"}
           id={"time-minutes"}
           name={"timeMinutes"}
-          value={state.timeMinutes}
           onChange={onChangeData}
+          placeholder={"m"}
+          type={"text"}
+          value={state.timeMinutes}
         />
         <input
-          type={"text"}
           id={"time-seconds"}
           name={"timeSeconds"}
-          value={state.timeSeconds}
           onChange={onChangeData}
+          placeholder={"s"}
+          type={"text"}
+          value={state.timeSeconds}
         />
         <button onClick={() => dispatch(calculateTimeAction())}>
-          {"Calculate Time"}
+          {"Calculate"}
         </button>
       </div>
-      <div id={"distance-row"}>
+      <div id={"distance-row"} className={"row"}>
         {"Distance (meters):"}
         <input
-          type={"text"}
+          className={"large"}
           id={"distance"}
           name={"distance"}
-          value={state.distance}
           onChange={onChangeData}
+          type={"text"}
+          value={state.distance}
         />
         <button onClick={() => dispatch(calculateDistanceAction())}>
-          {"Calculate Distance"}
+          {"Calculate"}
         </button>
       </div>
-      <div id={"pace-row"}>
+      <div id={"pace-row"} className={"row"}>
         {"Pace (hms):"}
         <input
           type={"text"}
@@ -76,7 +80,7 @@ const CalculatorContainer = () => {
           onChange={onChangeData}
         />
         <button onClick={() => dispatch(calculatePaceAction())}>
-          {"Calculate Pace"}
+          {"Calculate"}
         </button>
       </div>
 

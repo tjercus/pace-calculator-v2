@@ -1,9 +1,13 @@
+
+body {
+  font-size: 20px;
+}
 .App {
   text-align: center;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: cornflowerblue;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -13,6 +17,28 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.calculator-main {
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+}
+
+input[type="text"] {
+  max-width: 2em;
+  font-size: 1em;
+}
+
+input.large {
+  max-width: 5em;
+}
+
+button {
+  font-size: 1em;
+}
+
+.row {
+  flex: 1 0 auto;
+  padding: 0.5em;
+  flex-wrap: nowrap;
 }
